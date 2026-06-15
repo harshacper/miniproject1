@@ -1,0 +1,505 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Page wrapper ── */
+.page {
+  width: 1200px;
+  background: #ffffff;
+  padding: 32px 40px 48px;
+  border: 1.5px solid #d4ead4;
+  border-radius: 20px;
+  position: relative;
+}
+
+/* ── Top dot ── */
+.top-dot {
+  width: 24px;
+  height: 24px;
+  background: #4ade80;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+}
+
+/* ── Header ── */
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.eyebrow {
+  color: #4ade80;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  margin-bottom: 14px;
+}
+
+.headline {
+  font-size: 44px;
+  font-weight: 800;
+  color: #0d1117;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.subtext {
+  color: #6b7280;
+  font-size: 15px;
+  line-height: 1.65;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* ── Grid layout ── */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 14px;
+}
+
+/* ── OKRs Card — left column spans both rows ── */
+.card-okrs {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.goals-widget {
+  padding: 22px 22px 20px;
+  border-bottom: 1px solid #f0f0f0;
+  flex: 1;
+}
+
+.goals-heading {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 18px;
+}
+
+/* main goal row */
+.goal-main-row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.goal-check-icon {
+  width: 24px;
+  height: 24px;
+  background: #4ade80;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.goal-main-text {
+  font-size: 12px;
+  font-weight: 600;
+  color: #111827;
+  flex: 1;
+}
+
+.goal-user-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #bfdbfe;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  font-weight: 700;
+  color: #1d4ed8;
+}
+
+/* sub goals */
+.goal-sub-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.goal-sub-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.goal-sub-connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 2px;
+}
+
+.goal-sub-line {
+  width: 1.5px;
+  height: 6px;
+  background: #d1d5db;
+}
+
+.goal-sub-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1.5px solid #d1d5db;
+  background: #fff;
+  flex-shrink: 0;
+}
+
+.goal-pencil-icon {
+  width: 14px;
+  height: 14px;
+  opacity: 0.45;
+  flex-shrink: 0;
+}
+
+.goal-sub-text {
+  font-size: 10.5px;
+  color: #374151;
+  flex: 1;
+  line-height: 1.35;
+}
+
+.sub-badge {
+  font-size: 8.5px;
+  font-weight: 700;
+  border-radius: 20px;
+  padding: 2px 7px;
+  flex-shrink: 0;
+}
+
+.badge-ao   { background: #dbeafe; color: #1d4ed8; }
+.badge-dw   { background: #dcfce7; color: #15803d; }
+.badge-my   { background: #fef9c3; color: #854d0e; }
+.badge-sp   { background: #ede9fe; color: #6d28d9; }
+
+/* OKRs bottom section */
+.okrs-bottom {
+  padding: 22px 22px 26px;
+}
+
+.okrs-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #4ade80;
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+
+.okrs-desc {
+  font-size: 12.5px;
+  color: #6b7280;
+  line-height: 1.65;
+}
+
+/* ── Analytics Card — top right ── */
+.card-analytics {
+  grid-column: 2;
+  grid-row: 1;
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  padding: 22px;
+}
+
+.analytics-inner {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.analytics-text { flex: 1; }
+
+.analytics-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 9px;
+}
+
+.analytics-desc {
+  font-size: 12px;
+  color: #6b7280;
+  line-height: 1.65;
+}
+
+.analytics-chart-box {
+  width: 150px;
+  flex-shrink: 0;
+  background: #f9fafb;
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+  padding: 10px 10px 8px;
+}
+
+.chart-results-label {
+  font-size: 9px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 6px;
+}
+
+.chart-pill-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 4px;
+}
+
+.chart-pill {
+  background: #4ade80;
+  color: #fff;
+  font-size: 7.5px;
+  font-weight: 700;
+  border-radius: 20px;
+  padding: 2px 7px;
+}
+
+.chart-pill-grey {
+  background: #e5e7eb;
+  color: #6b7280;
+  font-size: 7.5px;
+  font-weight: 500;
+  border-radius: 20px;
+  padding: 2px 7px;
+}
+
+.chart-group-label {
+  font-size: 7.5px;
+  color: #9ca3af;
+  margin-bottom: 10px;
+}
+
+.bar-group {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 56px;
+}
+
+.bar {
+  border-radius: 3px 3px 0 0;
+  flex: 1;
+}
+
+.bar-legend {
+  display: flex;
+  gap: 6px;
+  margin-top: 6px;
+  flex-wrap: wrap;
+}
+
+.bar-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 6.5px;
+  color: #9ca3af;
+}
+
+.bar-legend-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+/* ── Grow + Turnover Row — bottom right ── */
+.card-grow-wrap {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  gap: 14px;
+  align-items: stretch;
+}
+
+.grow-card {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  padding: 20px;
+  min-width: 0;
+}
+
+.grow-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 7px;
+}
+
+.grow-desc {
+  font-size: 12px;
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.grow-profile-row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 10px;
+  background: #f9fafb;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #f0f0f0;
+}
+
+.grow-avatar-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #bfdbfe 0%, #c4b5fd 100%);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.grow-name {
+  font-size: 11px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.grow-role {
+  font-size: 9.5px;
+  color: #9ca3af;
+}
+
+.grow-career-section {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.career-goals-label {
+  font-size: 9px;
+  font-weight: 700;
+  color: #111827;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 6px;
+  padding: 5px 8px;
+  white-space: nowrap;
+  line-height: 1.3;
+}
+
+.career-goals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.career-goal-item {
+  font-size: 8.5px;
+  color: #4b5563;
+  line-height: 1.45;
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.career-bullet {
+  color: #4ade80;
+  font-size: 9px;
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+
+/* ── Turnover Card ── */
+.turnover-card {
+  width: 148px;
+  flex-shrink: 0;
+  background: linear-gradient(145deg, #134e3a 0%, #0f3d2e 100%);
+  border-radius: 16px;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.turnover-heading {
+  font-size: 17px;
+  font-weight: 800;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.donut-wrap {
+  position: relative;
+  width: 84px;
+  height: 84px;
+}
+
+.donut-wrap svg {
+  width: 84px;
+  height: 84px;
+}
+
+.donut-center-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.turnover-legend-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 9px;
+  color: #86efac;
+}
+
+.legend-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4ade80;
+}
